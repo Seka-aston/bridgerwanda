@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <section className="relative bg-secondary text-white py-20 md:py-32">
         <div className="absolute inset-0">
           <img
-            src="/images/hero.jpg"
+            src="/images/hero.jpeg"
             alt="Students collaborating"
             className="w-full h-full object-cover opacity-30"
             loading="eager"
