@@ -46,26 +46,26 @@ const BridgeAI: React.FC = () => {
   };
 
   const volunteerBenefits = [
-    { icon: <Database className="w-7 h-7 text-bridge-ai" />, title: 'Data Contribution', description: 'Help curate and validate training data that makes Bridge AI smarter and more relevant.' },
-    { icon: <TestTube className="w-7 h-7 text-bridge-ai" />, title: 'Testing & Feedback', description: 'Test features, report issues, and share feedback that shapes the user experience.' },
-    { icon: <FileSearch className="w-7 h-7 text-bridge-ai" />, title: 'Content Review', description: 'Review and improve AI-generated content to ensure accuracy and usefulness.' },
+    { icon: <Database className="w-7 h-7 text-primary" />, title: 'Data Contribution', description: 'Help curate and validate training data that makes Bridge AI smarter and more relevant.' },
+    { icon: <TestTube className="w-7 h-7 text-primary" />, title: 'Testing & Feedback', description: 'Test features, report issues, and share feedback that shapes the user experience.' },
+    { icon: <FileSearch className="w-7 h-7 text-primary" />, title: 'Content Review', description: 'Review and improve AI-generated content to ensure accuracy and usefulness.' },
   ];
 
   return (
     <div>
       {/* Hero */}
-      <section className="relative bg-bridge-ai text-white py-24 md:py-32">
+      <section className="relative bg-secondary text-white py-24 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <p className="text-sm font-bold text-blue-200 uppercase tracking-wider mb-4">Volunteer Opportunity</p>
+          <p className="text-sm font-bold text-green-300 uppercase tracking-wider mb-4">Volunteer Opportunity</p>
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
             Help Us Train Bridge AI
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-blue-100">
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
             We are building Bridge AI, an AI-powered platform designed to support technical students and graduates throughout their learning, career, and entrepreneurship journeys.
           </p>
           <a
             href="#volunteer-form"
-            className="inline-block font-bold py-3 px-8 rounded-lg transition-all duration-300 bg-white text-bridge-ai hover:bg-blue-50 text-lg shadow-md"
+            className="inline-block font-bold py-3 px-8 rounded-lg transition-all duration-300 bg-primary text-white hover:bg-primary-dark text-lg shadow-md"
           >
             Reserve Your Volunteer Spot
           </a>
@@ -81,7 +81,7 @@ const BridgeAI: React.FC = () => {
               title="What is Bridge AI?"
               description="Bridge AI is an AI-powered platform designed to support technical students and graduates throughout their learning, career, and entrepreneurship journeys."
             />
-            <div className="bg-blue-50 rounded-xl p-8 text-center">
+            <div className="bg-surface rounded-xl p-8 text-center">
               <p className="text-lg text-text-main">
                 We are looking for students and young technical talents who are interested in volunteering in the training, testing, feedback, and development process of Bridge AI. Your contributions will directly shape how the platform serves the next generation of skilled professionals.
               </p>
@@ -101,7 +101,7 @@ const BridgeAI: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {volunteerBenefits.map((benefit) => (
               <div key={benefit.title} className="bg-white rounded-xl p-8 text-center shadow-md hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-center h-14 w-14 rounded-full bg-blue-50 mx-auto mb-4">
+                <div className="flex items-center justify-center h-14 w-14 rounded-full bg-surface mx-auto mb-4">
                   {benefit.icon}
                 </div>
                 <h4 className="text-lg font-bold text-text-headings mb-2">{benefit.title}</h4>
@@ -118,14 +118,14 @@ const BridgeAI: React.FC = () => {
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-text-headings mb-6">Contact the Bridge AI Team</h3>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <div className="flex items-center justify-center gap-2 text-text-main">
-                <Mail className="w-5 h-5 text-bridge-ai" />
-                <span className="text-gray-500 italic">Email — pending from Bridge</span>
-              </div>
-              <div className="flex items-center justify-center gap-2 text-text-main">
-                <Phone className="w-5 h-5 text-bridge-ai" />
-                <span className="text-gray-500 italic">Phone — pending from Bridge</span>
-              </div>
+              <a href="mailto:bridgerwanda77@gmail.com" className="flex items-center justify-center gap-2 text-text-main hover:text-primary transition-colors">
+                <Mail className="w-5 h-5 text-primary" />
+                <span>bridgerwanda77@gmail.com</span>
+              </a>
+              <a href="tel:+250788434778" className="flex items-center justify-center gap-2 text-text-main hover:text-primary transition-colors">
+                <Phone className="w-5 h-5 text-primary" />
+                <span>+250 788 434 778</span>
+              </a>
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ const BridgeAI: React.FC = () => {
 
             {isSubmitted ? (
               <div className="bg-white rounded-xl shadow-lg p-10 text-center">
-                <CheckCircle className="w-16 h-16 mx-auto text-bridge-ai" />
+                <CheckCircle className="w-16 h-16 mx-auto text-primary" />
                 <h3 className="text-2xl font-bold mt-6 text-text-headings">Thank You!</h3>
                 <p className="mt-4 text-text-main text-lg">
                   Your volunteer interest has been recorded. The Bridge AI team will reach out to you with next steps.
@@ -234,7 +234,7 @@ const BridgeAI: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-bridge-ai text-white font-bold py-3 px-8 rounded-lg hover:bg-bridge-ai-dark transition-colors duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-dark transition-colors duration-300 shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Submitting...' : 'Reserve Your Spot'}
                   </button>
