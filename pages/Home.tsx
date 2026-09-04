@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           <img
             src="/images/hero.jpeg"
             alt="Students collaborating"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover object-top opacity-30"
             loading="eager"
           />
         </div>
