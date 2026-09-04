@@ -63,12 +63,12 @@ const BridgeAI: React.FC = () => {
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
             We are building Bridge AI, an AI-powered platform designed to support technical students and graduates throughout their learning, career, and entrepreneurship journeys.
           </p>
-          <a
-            href="#volunteer-form"
-            className="inline-block font-bold py-3 px-8 rounded-lg transition-all duration-300 bg-primary text-white hover:bg-primary-dark text-lg shadow-md"
+          <button
+            onClick={() => document.getElementById('volunteer-form')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-block font-bold py-3 px-8 rounded-lg transition-all duration-300 bg-primary text-white hover:bg-primary-dark text-lg shadow-md cursor-pointer"
           >
             Reserve Your Volunteer Spot
-          </a>
+          </button>
         </div>
       </section>
 
